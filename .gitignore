@@ -1,0 +1,10 @@
+# .gitignore
+
+# ignore OS generated files
+.DS_Store
+
+# ignore Editor files
+.idea
+
+# node modules
+starter/node_modules
