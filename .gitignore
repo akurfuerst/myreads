@@ -7,4 +7,4 @@
 .idea
 
 # node modules
-starter/node_modules
+node_modules

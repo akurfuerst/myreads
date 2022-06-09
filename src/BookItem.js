@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import categories from './utils/categories';
+import { motion } from 'framer-motion';
 
 const BookItem = ({ data, activeCategory, onUpdate }) => {
     const currentCategory = activeCategory || 'none';
@@ -10,7 +11,7 @@ const BookItem = ({ data, activeCategory, onUpdate }) => {
     };
 
     return (
-        <li>
+        <motion.li initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} layout>
             <div className="book">
                 <div className="book-top">
                     <div
@@ -41,7 +42,7 @@ const BookItem = ({ data, activeCategory, onUpdate }) => {
                 <div className="book-authors">{data.authors && data.authors.join(', ')}</div>
                 <Link className="book-button" to={`book/${data.id}`}>Details</Link>
             </div>
-        </li>
+        </motion.li>
     );
 };
 
